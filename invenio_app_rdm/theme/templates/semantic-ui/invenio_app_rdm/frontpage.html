@@ -2,6 +2,7 @@
   Copyright (C) 2019-2020 CERN.
   Copyright (C) 2019-2020 Northwestern University.
   Copyright (C) 2021 New York University.
+  Copyright (C) 2022 Technical University Munich.
 
   Invenio App RDM is free software; you can redistribute it and/or modify it
   under the terms of the MIT License; see LICENSE file for more details.
@@ -16,7 +17,7 @@
 {%- block first_section %}
 <div class="get-started-section section-content white-bg">
   <h2 class="section-title">
-    {{ _("You've successfully installed InvenioRDM!") }}
+    {{ _("Welcome to the MCube-Datahub!") }}
     <br/>
     {{ _("What is ahead?") }}
   </h2>
@@ -24,35 +25,23 @@
   <div class="ui container three column stackable grid center aligned vertically padded relaxed">
       <div class="rdm-goal column">
         <div class="featured-list">1</div>
-        <h3 class="section-title">{{ _("Configure") }}</h3>
+        <h3 class="section-title">{{ _("Save") }}</h3>
         <div class="command-line">
-          {% trans configuration_link="https://inveniordm.docs.cern.ch/install/configuration/" %}
-            Configure the datamodel, resource types, permissions and much more to make it suit your needs! For more
-            information on how to do it visit the <a href="{{ configuration_link }}" target="_blank">configuration
-            section in the docs</a>.
-          {% endtrans %}
+            Save the data you need for your project.
         </div>
       </div>
       <div class="rdm-goal column">
         <div class="featured-list">2</div>
-        <h3 class="section-title">{{ _("Customize") }}</h3>
+        <h3 class="section-title">{{ _("Share") }}</h3>
           <div class="command-line">
-            {% trans configuration_link="https://inveniordm.docs.cern.ch/customize/" %}
-              Customize the layout and adapt the styling to match your institution's. See how to do so <a
-              href="{{ configuration_link }}" target="_blank">here</a>.
-            {% endtrans %}
+            Share your data within the respective community, your project or the whole MCube-Cluster!
         </div>
       </div>
       <div class="rdm-goal column">
         <div class="featured-list">3</div>
-        <h3 class="section-title">{{ _("Run it!") }}</h3>
+        <h3 class="section-title">{{ _("Distribute it to the world") }}</h3>
         <div class="command-line">
-          {% trans
-          deployment_link="https://inveniordm.docs.cern.ch/install/build-setup-run/#run_1"
-          %}
-          <a href="{{ deployment_link }}" target="_blank">Run</a> your
-          InvenioRDM instance locally or in containers.
-          {% endtrans %}
+          Satsified with the current version of your data? Set the restriction to public and share it with the world!
         </div>
       </div>
     <div class="row one column center aligned">
