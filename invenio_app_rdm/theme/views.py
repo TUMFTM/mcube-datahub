@@ -31,6 +31,8 @@ def create_blueprint(app):
 
     blueprint.add_url_rule(routes["index"], view_func=index)
     blueprint.add_url_rule(routes["help_search"], view_func=help_search)
+    blueprint.add_url_rule(routes["impressum"], view_func=impressum)
+    blueprint.add_url_rule(routes["privacy"], view_func=privacy)
 
     @blueprint.before_app_first_request
     def init_menu():
@@ -73,3 +75,23 @@ def help_search():
         f"invenio_app_rdm/help/search.{locale}.html",
         "invenio_app_rdm/help/search.en.html",
     ])
+
+def impressum():
+    """impressum."""
+    # Default to rendering english page if locale page not found.
+    locale = get_locale()
+    return render_template([
+        f"invenio_app_rdm/impressum.{locale}.html",
+        "invenio_app_rdm/impressum.html",
+    ])
+
+def privacy():
+    """Privacy page."""
+    # Default to rendering english page if locale page not found.
+    locale = get_locale()
+    return render_template([
+        f"invenio_app_rdm/privacy.{locale}.html",
+        "invenio_app_rdm/privacy.html",
+    ])
+
+

@@ -554,6 +554,8 @@ APP_RDM_USER_DASHBOARD_ROUTES = {
 
 APP_RDM_ROUTES = {
     "index": "/",
+    "impressum": "/impressum",
+    "privacy": "/privacy",
     "help_search": "/help/search",
     "record_search": "/search2",
     "record_detail": "/records/<pid_value>",
